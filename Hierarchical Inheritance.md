@@ -28,13 +28,49 @@ To write a Python program to get the employee and doctor details and display the
 
 ### PROGRAM
 ```
+regno:212223070023
+name:Saran Krishna P S
+class Details:
+    def __init__(self):
+        self.name = input("Enter name: ")
+        self.age = input("Enter age: ")
+
+class Employee(Details):
+    def __init__(self):
+        super().__init__()
+        self.emp_id = input("Enter employee ID: ")
+        self.department = input("Enter department: ")
+
+    def display_employee(self):
+        print("\n--- Employee Details ---")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Employee ID: {self.emp_id}")
+        print(f"Department: {self.department}")
+
+class Doctor(Details):
+    def __init__(self):
+        super().__init__()
+        self.doctor_id = input("Enter doctor ID: ")
+        self.specialization = input("Enter specialization: ")
+
+    def display_doctor(self):
+        print("\n--- Doctor Details ---")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Doctor ID: {self.doctor_id}")
+        print(f"Specialization: {self.specialization}")
+
+print("Enter details for an Employee
 
 
 ```
 
 ### OUTPUT  
 
-(Output Screenshot)  
+![image](https://github.com/user-attachments/assets/4ad07138-9114-4173-b814-9eac41d94616)
+  
 
 
 ### RESULT
+thus the program is executed successfully.
