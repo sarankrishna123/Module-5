@@ -39,10 +39,36 @@ To write a Python program to get the name, age, and ID of a person and display t
 ### PROGRAM
 
 ```
+regno:212223070023
+name:Saran Krishna P S
+class Person:
+    def __init__(self):
+        self.name = input("Enter name: ")
+
+class Employee(Person):
+    def __init__(self):
+        super().__init__()
+        self.age = input("Enter age: ")
+
+class Details(Employee):
+    def __init__(self):
+        super().__init__()
+        self.emp_id = input("Enter ID: ")
+
+    def display_info(self):
+        print("\n--- Person Details ---")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"ID: {self.emp_id}")
+
+person_detail = Details()
+person_detail.display_info()
 
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/be7749aa-e486-4035-aadd-354f73965605)
 
 ### RESULT
+thus the program is executed successfully.
