@@ -32,14 +32,44 @@ To write a Python program to get the name, attendance, and ID of a student and c
 ### PROGRAM
 
 ```
+reg no:212223070023
+name:Saran Krishna P S
+class StudentInfo:
+    def __init__(self, name, student_id):
+        self.name = name
+        self.student_id = student_id
+
+class Attendance:
+    def __init__(self, attendance):
+        self.attendance = attendance
+
+class Student(StudentInfo, Attendance):
+    def __init__(self, name, student_id, attendance):
+        StudentInfo.__init__(self, name, student_id)
+        Attendance.__init__(self, attendance)
+
+    def check_eligibility(self):
+        if self.attendance > 80:
+            print(f"Student {self.name} (ID: {self.student_id}) is eligible for the next module.")
+        else:
+            print(f"Student {self.name} (ID: {self.student_id}) is not eligible for the next module.")
+
+name = input("Enter student name: ")
+student_id = input("Enter student ID: ")
+attendance = float(input("Enter attendance percentage: "))
+
+student = Student(name, student_id, attendance)
+student.check_eligibility()
+
 
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/41e864a0-2ffa-40fd-8dfa-29b62e5585e9)
 
 ### RESULT
 
-
+thus the program is executed successfully.
 
 
